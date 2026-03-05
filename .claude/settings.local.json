@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(start \"\" \"c:/Users/nick/Desktop/dev/melonpatchdev/variant4-hybrid.html\")",
+      "Bash(rm variant1-garden.html variant2-minimal.html variant3-startup.html index.html)",
+      "Bash(mv variant4-hybrid.html index.html)"
+    ]
+  }
+}
