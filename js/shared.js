@@ -1,90 +1,77 @@
 // MelonPatch Shared JS
 
-// Dark mode toggle
+// Dark mode toggle (initial state is handled by inline script in <head>)
 function initDarkMode() {
   const toggle = document.querySelector('.dark-toggle');
-  const saved = localStorage.getItem('melonpatch-dark');
-
-  if (saved === 'true' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.body.classList.add('dark');
-    document.documentElement.classList.add('dark');
-  }
-
-  if (toggle) {
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      document.documentElement.classList.toggle('dark');
-      localStorage.setItem('melonpatch-dark', document.body.classList.contains('dark'));
-      updateToggleIcon();
-    });
-  }
-
-  updateToggleIcon();
-}
-
-function updateToggleIcon() {
-  const toggle = document.querySelector('.dark-toggle');
   if (!toggle) return;
-  toggle.textContent = document.body.classList.contains('dark') ? '\u2600' : '\u263E';
+
+  toggle.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.toggle('dark');
+    document.body.classList.toggle('dark', isDark);
+    localStorage.setItem('melonpatch-dark', isDark);
+    toggle.textContent = isDark ? '\u2600' : '\u263E';
+  });
+
+  // Set initial icon
+  toggle.textContent = document.documentElement.classList.contains('dark') ? '\u2600' : '\u263E';
 }
 
-// Scroll reveal animations
+// Scroll reveal animations using IntersectionObserver
 function initScrollReveal() {
   const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .stagger-children');
+  if (!reveals.length) return;
 
-  function checkReveal() {
-    reveals.forEach(el => {
-      const windowHeight = window.innerHeight;
-      const elementTop = el.getBoundingClientRect().top;
-      const revealPoint = 120;
-
-      if (elementTop < windowHeight - revealPoint) {
-        el.classList.add('active');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
       }
     });
-  }
-
-  window.addEventListener('scroll', checkReveal);
-  checkReveal(); // Check on load
-}
-
-// Smooth scroll for anchor links
-function initSmoothScroll() {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
+  }, {
+    threshold: 0,
+    rootMargin: '0px 0px -120px 0px'
   });
+
+  reveals.forEach(el => observer.observe(el));
 }
 
 // Mobile nav toggle
 function initMobileNav() {
   const burger = document.querySelector('.mobile-nav-toggle');
   const nav = document.querySelector('.mobile-nav');
+  const backdrop = document.querySelector('.mobile-nav-backdrop');
 
-  if (burger && nav) {
-    burger.addEventListener('click', () => {
-      nav.classList.toggle('open');
-      burger.classList.toggle('open');
-    });
+  if (!burger || !nav) return;
 
-    nav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('open');
-        burger.classList.remove('open');
-      });
-    });
+  function closeNav() {
+    nav.classList.remove('open');
+    burger.classList.remove('open');
+    if (backdrop) backdrop.classList.remove('open');
   }
+
+  function openNav() {
+    nav.classList.add('open');
+    burger.classList.add('open');
+    if (backdrop) backdrop.classList.add('open');
+  }
+
+  burger.addEventListener('click', () => {
+    nav.classList.contains('open') ? closeNav() : openNav();
+  });
+
+  if (backdrop) {
+    backdrop.addEventListener('click', closeNav);
+  }
+
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeNav);
+  });
 }
 
 // Init all
 document.addEventListener('DOMContentLoaded', () => {
   initDarkMode();
   initScrollReveal();
-  initSmoothScroll();
   initMobileNav();
 });

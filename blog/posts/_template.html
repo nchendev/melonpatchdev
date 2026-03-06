@@ -8,6 +8,7 @@
   <meta name="author" content="MelonPatch">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://melonpatch.dev/blog/posts/POST_SLUG.html">
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
 
   <!-- Open Graph -->
   <meta property="og:type" content="article">
@@ -25,41 +26,18 @@
   <meta name="twitter:description" content="POST_DESCRIPTION">
   <meta name="twitter:image" content="https://melonpatch.dev/assets/og-image.png">
 
+  <!-- Dark mode (before CSS to prevent FOUC) -->
+  <script>
+    (function(){var s=localStorage.getItem('melonpatch-dark');if(s==='true'||(!s&&matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}})();
+  </script>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="../../css/tailwind.css">
   <link rel="stylesheet" href="../../css/shared.css">
-  <style>
-    .mono { font-family: 'SF Mono', 'Fira Code', monospace; }
-    .rule {
-      height: 1px;
-      background: linear-gradient(to right, transparent, rgba(1,68,33,0.2), transparent);
-    }
-    body.dark .rule {
-      background: linear-gradient(to right, transparent, rgba(208,216,195,0.1), transparent);
-    }
-    .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; }
-    .prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; }
-    .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
-    .prose ul, .prose ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
-    .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
-    .prose blockquote {
-      border-left: 3px solid #014421;
-      padding-left: 1.25rem;
-      margin: 1.5rem 0;
-      font-style: italic;
-      color: #6b7280;
-    }
-    body.dark .prose blockquote { border-color: #D0D8C3; color: #9ca3af; }
-    .prose code {
-      font-family: 'SF Mono', 'Fira Code', monospace;
-      font-size: 0.875rem;
-      background: rgba(1,68,33,0.06);
-      padding: 0.15rem 0.4rem;
-      border-radius: 3px;
-    }
-    body.dark .prose code { background: rgba(208,216,195,0.1); }
-  </style>
 </head>
 <body id="top" class="bg-white text-gray-900">
 
@@ -83,8 +61,11 @@
     </div>
   </nav>
 
+  <!-- Mobile Nav Backdrop -->
+  <div class="mobile-nav-backdrop fixed inset-0 z-40 bg-black/30 md:hidden"></div>
+
   <!-- Mobile Nav -->
-  <div class="mobile-nav fixed top-0 right-0 w-64 h-full z-40 bg-white dark:bg-[#141c17] shadow-2xl p-8 pt-20 md:hidden">
+  <div class="mobile-nav fixed top-0 right-0 w-64 h-full z-50 bg-white dark:bg-[#141c17] shadow-2xl p-8 pt-20 md:hidden">
     <div class="flex flex-col gap-6 text-sm font-medium tracking-widest uppercase">
       <a href="../../#products" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">Products</a>
       <a href="../../#about" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">About</a>
