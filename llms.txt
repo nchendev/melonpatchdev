@@ -1,0 +1,38 @@
+# MelonPatch
+
+> MelonPatch is an indie software studio that builds AI-powered tools and experiences. Founded in 2026, the studio operates remote-first with a philosophy of intentional, human-centered software design. Tagline: "Cultivating Products for the You of Today."
+
+## Products
+
+- [AI eBook Reader](https://melonpatch.dev/products/ai-ebook-reader.html): An AI-powered iOS ebook reader designed for language learners. Users can upload TXT or EPUB files in any language and read with tap-to-translate, context-aware phrase detection, pronunciation guides, and spaced-repetition flashcard review. Words and phrases can be bookmarked to a word bank organized by language. Status: Coming Soon.
+
+## Blog
+
+- [Blog](https://melonpatch.dev/blog/): Updates, development insights, and behind-the-scenes posts from the MelonPatch studio.
+
+## About
+
+MelonPatch builds thoughtful software for real problems. No bloat, no hype — just products grown from the ground up with care for the people who use them.
+
+- Philosophy: Ship small. Iterate fast. Care deeply.
+- Focus: AI-powered tools, creative software, indie games.
+- Structure: Remote-first indie studio.
+
+## Contact
+
+- Email: hello@melonpatch.dev
+- Website: https://melonpatch.dev
+
+## FAQ
+
+### What is MelonPatch?
+MelonPatch is an indie software studio that builds AI-powered tools and experiences. Founded in 2026, the studio's philosophy is to ship small, iterate fast, and care deeply about the people who use their products.
+
+### What is the MelonPatch AI eBook Reader?
+The MelonPatch AI eBook Reader is an iOS app for language learners. It supports TXT and EPUB formats. Users can upload books in any language, tap words or phrases for context-aware translation, hear pronunciation, and save translations to flashcard decks organized by language for spaced-repetition review.
+
+### What file formats does the AI eBook Reader support?
+TXT and EPUB. Users can upload books in any language and translate to any target language.
+
+### How does the flashcard feature work?
+Tap any word or phrase while reading to translate it. Bookmark the translation and it gets added to your word bank. The app creates separate flashcard decks per language, using spaced repetition for review.

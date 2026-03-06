@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>OG Image Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #222; }
+    .og-card {
+      width: 1200px;
+      height: 630px;
+      background: #014421;
+      font-family: 'Inter', sans-serif;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px;
+      background-image: radial-gradient(ellipse 2px 3px at center, rgba(208,216,195,0.06) 50%, transparent 50%);
+      background-size: 40px 40px;
+    }
+    .blob-1 {
+      position: absolute;
+      width: 400px;
+      height: 360px;
+      background: rgba(208,216,195,0.08);
+      border-radius: 50% 40% 60% 30% / 40% 50% 30% 60%;
+      top: -50px;
+      right: -50px;
+      transform: rotate(-15deg);
+    }
+    .blob-2 {
+      position: absolute;
+      width: 300px;
+      height: 260px;
+      background: rgba(208,216,195,0.06);
+      border-radius: 40% 50% 30% 60% / 50% 40% 60% 30%;
+      bottom: -30px;
+      left: -30px;
+      transform: rotate(10deg);
+    }
+    h1 {
+      font-size: 96px;
+      font-weight: 900;
+      color: #D0D8C3;
+      letter-spacing: -3px;
+      line-height: 1;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .rule {
+      width: 420px;
+      height: 1px;
+      background: rgba(208,216,195,0.3);
+      margin-bottom: 32px;
+    }
+    .tagline {
+      font-size: 32px;
+      color: rgba(208,216,195,0.8);
+      font-weight: 400;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+    }
+    .desc {
+      font-size: 22px;
+      color: rgba(208,216,195,0.5);
+      line-height: 1.6;
+      max-width: 600px;
+      position: relative;
+      z-index: 1;
+    }
+    .bottom-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background: rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      padding: 0 80px;
+    }
+    .url {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 14px;
+      color: rgba(208,216,195,0.6);
+    }
+    p.hint {
+      color: #888;
+      font-family: sans-serif;
+      font-size: 14px;
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="og-card">
+      <div class="blob-1"></div>
+      <div class="blob-2"></div>
+      <h1>MelonPatch</h1>
+      <div class="rule"></div>
+      <p class="tagline">Cultivating Products for the You of Today</p>
+      <p class="desc">Indie software studio building AI-powered tools and experiences for language learners.</p>
+      <div class="bottom-bar">
+        <span class="url">melonpatch.dev</span>
+      </div>
+    </div>
+    <p class="hint">Screenshot this at exactly 1200x630 to use as og-image.png</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — MelonPatch | Updates, Insights, and Behind the Scenes</title>
+  <meta name="description" content="Read updates, development insights, and behind-the-scenes posts from the MelonPatch indie software studio.">
+  <meta name="author" content="MelonPatch">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://melonpatch.dev/blog/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MelonPatch">
+  <meta property="og:title" content="Blog — MelonPatch">
+  <meta property="og:description" content="Updates, development insights, and behind-the-scenes posts from MelonPatch.">
+  <meta property="og:url" content="https://melonpatch.dev/blog/">
+  <meta property="og:image" content="https://melonpatch.dev/assets/og-image.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../css/tailwind.css">
+  <link rel="stylesheet" href="../css/shared.css">
+  <style>
+    .mono { font-family: 'SF Mono', 'Fira Code', monospace; }
+    .rule {
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(1,68,33,0.2), transparent);
+    }
+    body.dark .rule {
+      background: linear-gradient(to right, transparent, rgba(208,216,195,0.1), transparent);
+    }
+    .blog-card {
+      border: 1px solid rgba(1,68,33,0.1);
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover {
+      border-color: #014421;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(1,68,33,0.06);
+    }
+    body.dark .blog-card {
+      border-color: rgba(208,216,195,0.1);
+    }
+    body.dark .blog-card:hover {
+      border-color: #D0D8C3;
+      box-shadow: 0 4px 16px rgba(208,216,195,0.04);
+    }
+  </style>
+</head>
+<body id="top" class="bg-white text-gray-900">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-[#0a0f0d]/80 backdrop-blur-md border-b border-moon-mist/30 dark:border-moon-mist/10">
+    <div class="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
+      <a href="../" class="logo-text text-xl tracking-tight">
+        <span>M</span><span class="text-gray-400 dark:text-gray-500">P</span>
+      </a>
+      <div class="hidden md:flex items-center gap-10 text-xs font-medium tracking-widest uppercase">
+        <a href="../#products" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">Products</a>
+        <a href="../#about" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">About</a>
+        <a href="./" class="text-kaitoke dark:text-moon-mist transition-colors">Blog</a>
+        <a href="../#contact" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">Contact</a>
+      </div>
+      <button class="mobile-nav-toggle md:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+        <span class="w-6 h-0.5 bg-kaitoke dark:bg-moon-mist transition-all"></span>
+        <span class="w-6 h-0.5 bg-kaitoke dark:bg-moon-mist transition-all"></span>
+        <span class="w-4 h-0.5 bg-kaitoke dark:bg-moon-mist transition-all"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav fixed top-0 right-0 w-64 h-full z-40 bg-white dark:bg-[#141c17] shadow-2xl p-8 pt-20 md:hidden">
+    <div class="flex flex-col gap-6 text-sm font-medium tracking-widest uppercase">
+      <a href="../#products" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">Products</a>
+      <a href="../#about" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">About</a>
+      <a href="./" class="text-kaitoke dark:text-moon-mist">Blog</a>
+      <a href="../#contact" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">Contact</a>
+    </div>
+  </div>
+
+  <main>
+
+  <!-- Header -->
+  <section class="pt-32 pb-16 bg-[#f8f9f6] dark:bg-[#0a0f0d]">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="max-w-3xl">
+        <div class="reveal mb-4">
+          <span class="mono text-xs text-kaitoke/40 dark:text-moon-mist/30 tracking-wider">// from the garden</span>
+        </div>
+        <h1 class="reveal text-5xl md:text-7xl font-black text-kaitoke dark:text-moon-mist tracking-tighter mb-6" style="transition-delay: 0.1s;">Blog</h1>
+        <div class="rule mb-6 reveal" style="transition-delay: 0.15s;"></div>
+        <p class="reveal text-lg text-gray-600 dark:text-gray-400 font-light" style="transition-delay: 0.2s;">
+          Updates, insights, and stories from inside the studio.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Posts -->
+  <section class="py-16 bg-white dark:bg-[#141c17]">
+    <div class="max-w-3xl mx-auto px-8">
+
+      <!-- Empty state (remove when posts exist) -->
+      <div class="text-center py-20 reveal">
+        <span class="mono text-xs text-gray-400 dark:text-gray-500 block mb-4">no_posts_yet</span>
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-moon-mist mb-3">Seeds are planted.</h2>
+        <p class="text-gray-500 dark:text-gray-400 text-sm max-w-md mx-auto">
+          Our first blog posts are growing. Check back soon for updates on our products, development insights, and more.
+        </p>
+      </div>
+
+      <!-- Blog post cards (uncomment and duplicate as needed)
+      <div class="space-y-8 stagger-children">
+        <a href="posts/example-post.html" class="blog-card block p-8 bg-[#f8f9f6] dark:bg-[#0a0f0d]">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="mono text-xs text-gray-400 dark:text-gray-500">2026-03-05</span>
+            <span class="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+            <span class="mono text-xs text-kaitoke/60 dark:text-moon-mist/40">product update</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-moon-mist mb-2">Example Blog Post Title</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
+            A brief description of the blog post goes here. Keep it concise and engaging to encourage readers to click through.
+          </p>
+          <span class="mono text-xs text-kaitoke dark:text-moon-mist">read more &rarr;</span>
+        </a>
+      </div>
+      -->
+
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-kaitoke dark:bg-[#0a0f0d] text-white/60 dark:text-gray-500">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <a href="../" class="logo-text text-lg tracking-tight">
+        <span class="text-white dark:text-moon-mist">MELON</span><span class="text-moon-mist dark:text-gray-400">PATCH</span>
+      </a>
+      <p class="text-sm">&copy; 2026 MelonPatch. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="dark-toggle" aria-label="Toggle dark mode"></button>
+  <script src="../js/shared.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POST_TITLE — MelonPatch Blog</title>
+  <meta name="description" content="POST_DESCRIPTION">
+  <meta name="author" content="MelonPatch">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://melonpatch.dev/blog/posts/POST_SLUG.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="MelonPatch">
+  <meta property="og:title" content="POST_TITLE">
+  <meta property="og:description" content="POST_DESCRIPTION">
+  <meta property="og:url" content="https://melonpatch.dev/blog/posts/POST_SLUG.html">
+  <meta property="og:image" content="https://melonpatch.dev/assets/og-image.png">
+  <meta property="article:published_time" content="POST_DATE">
+  <meta property="article:author" content="MelonPatch">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="POST_TITLE">
+  <meta name="twitter:description" content="POST_DESCRIPTION">
+  <meta name="twitter:image" content="https://melonpatch.dev/assets/og-image.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../css/tailwind.css">
+  <link rel="stylesheet" href="../../css/shared.css">
+  <style>
+    .mono { font-family: 'SF Mono', 'Fira Code', monospace; }
+    .rule {
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(1,68,33,0.2), transparent);
+    }
+    body.dark .rule {
+      background: linear-gradient(to right, transparent, rgba(208,216,195,0.1), transparent);
+    }
+    .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; }
+    .prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; }
+    .prose p { margin-bottom: 1.25rem; line-height: 1.8; }
+    .prose ul, .prose ol { margin-bottom: 1.25rem; padding-left: 1.5rem; }
+    .prose li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .prose blockquote {
+      border-left: 3px solid #014421;
+      padding-left: 1.25rem;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: #6b7280;
+    }
+    body.dark .prose blockquote { border-color: #D0D8C3; color: #9ca3af; }
+    .prose code {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 0.875rem;
+      background: rgba(1,68,33,0.06);
+      padding: 0.15rem 0.4rem;
+      border-radius: 3px;
+    }
+    body.dark .prose code { background: rgba(208,216,195,0.1); }
+  </style>
+</head>
+<body id="top" class="bg-white text-gray-900">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-[#0a0f0d]/80 backdrop-blur-md border-b border-moon-mist/30 dark:border-moon-mist/10">
+    <div class="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
+      <a href="../../" class="logo-text text-xl tracking-tight">
+        <span>M</span><span class="text-gray-400 dark:text-gray-500">P</span>
+      </a>
+      <div class="hidden md:flex items-center gap-10 text-xs font-medium tracking-widest uppercase">
+        <a href="../../#products" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">Products</a>
+        <a href="../../#about" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">About</a>
+        <a href="../" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">Blog</a>
+        <a href="../../#contact" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">Contact</a>
+      </div>
+      <button class="mobile-nav-toggle md:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+        <span class="w-6 h-0.5 bg-kaitoke dark:bg-moon-mist transition-all"></span>
+        <span class="w-6 h-0.5 bg-kaitoke dark:bg-moon-mist transition-all"></span>
+        <span class="w-4 h-0.5 bg-kaitoke dark:bg-moon-mist transition-all"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav fixed top-0 right-0 w-64 h-full z-40 bg-white dark:bg-[#141c17] shadow-2xl p-8 pt-20 md:hidden">
+    <div class="flex flex-col gap-6 text-sm font-medium tracking-widest uppercase">
+      <a href="../../#products" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">Products</a>
+      <a href="../../#about" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">About</a>
+      <a href="../" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">Blog</a>
+      <a href="../../#contact" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">Contact</a>
+    </div>
+  </div>
+
+  <main>
+
+  <!-- Article Header -->
+  <section class="pt-32 pb-12 bg-[#f8f9f6] dark:bg-[#0a0f0d]">
+    <div class="max-w-3xl mx-auto px-8">
+      <div class="reveal mb-4">
+        <a href="../" class="mono text-xs text-kaitoke/40 dark:text-moon-mist/30 tracking-wider hover:text-kaitoke dark:hover:text-moon-mist transition-colors">&larr; back to blog</a>
+      </div>
+      <div class="reveal flex items-center gap-3 mb-6" style="transition-delay: 0.1s;">
+        <span class="mono text-xs text-gray-400 dark:text-gray-500">POST_DATE</span>
+        <span class="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+        <span class="mono text-xs text-kaitoke/60 dark:text-moon-mist/40">POST_CATEGORY</span>
+      </div>
+      <h1 class="reveal text-4xl md:text-5xl font-black text-kaitoke dark:text-moon-mist tracking-tight leading-tight mb-6" style="transition-delay: 0.15s;">POST_TITLE</h1>
+      <div class="rule reveal" style="transition-delay: 0.2s;"></div>
+    </div>
+  </section>
+
+  <!-- Article Body -->
+  <article class="py-12 bg-white dark:bg-[#141c17]">
+    <div class="max-w-3xl mx-auto px-8 prose text-gray-600 dark:text-gray-400 reveal">
+
+      <!-- Replace this with your post content -->
+      <p>Your blog post content goes here. Write in plain HTML using standard tags.</p>
+
+      <h2 class="text-gray-900 dark:text-moon-mist">Section Heading</h2>
+      <p>More content here. Use standard HTML tags for formatting.</p>
+
+      <ul>
+        <li>List item one</li>
+        <li>List item two</li>
+      </ul>
+
+      <blockquote>
+        <p>A notable quote or callout goes here.</p>
+      </blockquote>
+
+      <p>Final paragraph. Replace all placeholder content with your actual post.</p>
+      <!-- End post content -->
+
+    </div>
+  </article>
+
+  <!-- Post Footer -->
+  <section class="py-12 bg-[#f8f9f6] dark:bg-[#0a0f0d]">
+    <div class="max-w-3xl mx-auto px-8 text-center reveal">
+      <div class="rule mb-8"></div>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Thanks for reading.</p>
+      <a href="../" class="mono text-xs text-kaitoke dark:text-moon-mist hover:underline">&larr; more posts</a>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-kaitoke dark:bg-[#0a0f0d] text-white/60 dark:text-gray-500">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <a href="../../" class="logo-text text-lg tracking-tight">
+        <span class="text-white dark:text-moon-mist">MELON</span><span class="text-moon-mist dark:text-gray-400">PATCH</span>
+      </a>
+      <p class="text-sm">&copy; 2026 MelonPatch. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="dark-toggle" aria-label="Toggle dark mode"></button>
+  <script src="../../js/shared.js"></script>
+</body>
+</html>

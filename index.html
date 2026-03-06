@@ -3,22 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MelonPatch</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="css/shared.css">
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            kaitoke: { DEFAULT: '#014421', light: '#026b34', dark: '#01331a' },
-            'moon-mist': { DEFAULT: '#D0D8C3', light: '#e2e8d8', dark: '#b8c2a8' },
-          }
+  <title>MelonPatch — Indie Software Studio | AI-Powered Tools for Language Learners</title>
+  <meta name="description" content="MelonPatch is an indie software studio building AI-powered tools. Our flagship product is an iOS ebook reader for language learners with tap-to-translate, context-aware phrase detection, pronunciation, and flashcard review.">
+  <meta name="author" content="MelonPatch">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://melonpatch.dev/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MelonPatch">
+  <meta property="og:title" content="MelonPatch — Cultivating Products for the You of Today">
+  <meta property="og:description" content="Indie software studio building AI-powered tools. Our first product: an iOS ebook reader for language learners with tap-to-translate, pronunciation, and smart flashcard review.">
+  <meta property="og:url" content="https://melonpatch.dev/">
+  <meta property="og:image" content="https://melonpatch.dev/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MelonPatch — Cultivating Products for the You of Today">
+  <meta name="twitter:description" content="Indie software studio building AI-powered tools. iOS ebook reader for language learners.">
+  <meta name="twitter:image" content="https://melonpatch.dev/assets/og-image.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MelonPatch",
+    "url": "https://melonpatch.dev",
+    "description": "MelonPatch is an indie software studio that builds AI-powered tools and experiences. Founded in 2026, the studio focuses on thoughtful software for language learners and creative users.",
+    "foundingDate": "2026",
+    "email": "hello@melonpatch.dev",
+    "sameAs": [],
+    "knowsAbout": ["AI software", "language learning", "iOS applications", "ebook readers", "indie software development"]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MelonPatch AI eBook Reader",
+    "applicationCategory": "EducationApplication",
+    "operatingSystem": "iOS",
+    "description": "An AI-powered iOS ebook reader designed for language learners. Features tap-to-translate, context-aware phrase detection, pronunciation guides, and spaced-repetition flashcard review.",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/PreOrder"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "MelonPatch"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is MelonPatch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MelonPatch is an indie software studio that builds AI-powered tools and experiences. Founded in 2026, the studio's philosophy is to ship small, iterate fast, and care deeply about the people who use their products."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the MelonPatch AI eBook Reader?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The MelonPatch AI eBook Reader is an iOS app built for language learners. Users can upload ebooks in any language and read with AI-powered tap-to-translate, context-aware phrase detection, native pronunciation, and built-in spaced-repetition flashcard review."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What file formats does the AI eBook Reader support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The AI eBook Reader supports TXT and EPUB file formats. Users can upload books in any language and translate to any target language."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the flashcard review feature work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "When reading, users can bookmark translated words and phrases. These are saved to a word bank organized by language, and can be reviewed using a built-in spaced-repetition flashcard system with separate decks for each language."
         }
       }
-    }
+    ]
+  }
   </script>
+
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="css/tailwind.css">
+  <link rel="stylesheet" href="css/shared.css">
   <style>
     /* Garden backgrounds */
     .garden-blob {
@@ -133,6 +219,9 @@
       <div class="hidden md:flex items-center gap-10 text-xs font-medium tracking-widest uppercase">
         <a href="#products" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">Products</a>
         <a href="#about" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">About</a>
+        <a href="#team" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">Team</a>
+        <a href="#faq" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">FAQ</a>
+        <a href="blog/" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">Blog</a>
         <a href="#contact" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">Contact</a>
       </div>
       <button class="mobile-nav-toggle md:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
@@ -148,9 +237,17 @@
     <div class="flex flex-col gap-6 text-sm font-medium tracking-widest uppercase">
       <a href="#products" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">Products</a>
       <a href="#about" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">About</a>
+      <a href="#team" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">Team</a>
+      <a href="#faq" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">FAQ</a>
+      <a href="blog/" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">Blog</a>
       <a href="#contact" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">Contact</a>
     </div>
   </div>
+
+  <main>
+
+  <!-- Machine-readable description -->
+  <p class="sr-only">MelonPatch is an indie software studio founded in 2026 that builds AI-powered applications. Their flagship product is an AI eBook Reader for iOS designed for language learners, featuring context-aware tap-to-translate, pronunciation assistance, and spaced-repetition flashcard review. Users can upload TXT or EPUB files in any language and translate to any target language.</p>
 
   <!-- Hero (Garden background + Minimal content layout) -->
   <section class="hero-hybrid leaf-pattern bg-moon-mist-light dark:bg-[#0a0f0d]">
@@ -205,7 +302,7 @@
 
       <div class="grid md:grid-cols-2 gap-8">
         <!-- Product 1 -->
-        <div class="product-card p-8 relative reveal-left bg-white dark:bg-[#141c17]">
+        <article class="product-card p-8 relative reveal-left bg-white dark:bg-[#141c17]">
           <span class="counter text-kaitoke dark:text-moon-mist">01</span>
           <div class="relative z-10">
             <div class="flex items-center gap-3 mb-6">
@@ -216,16 +313,17 @@
             <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6">
               A full-featured ebook reader built for language learners. Context-aware translation, pronunciation, and smart flashcard review — all in one beautiful iOS app.
             </p>
-            <div class="flex flex-wrap gap-2">
+            <div class="flex flex-wrap gap-2 mb-6">
               <span class="mono text-xs px-2 py-1 bg-moon-mist/40 dark:bg-moon-mist/10 text-kaitoke dark:text-moon-mist">iOS</span>
               <span class="mono text-xs px-2 py-1 bg-moon-mist/40 dark:bg-moon-mist/10 text-kaitoke dark:text-moon-mist">AI</span>
               <span class="mono text-xs px-2 py-1 bg-moon-mist/40 dark:bg-moon-mist/10 text-kaitoke dark:text-moon-mist">Language</span>
             </div>
+            <a href="products/ai-ebook-reader.html" class="text-sm font-medium text-kaitoke dark:text-moon-mist underline underline-offset-4 decoration-kaitoke/30 dark:decoration-moon-mist/30 hover:decoration-kaitoke dark:hover:decoration-moon-mist transition-colors">Learn More &rarr;</a>
           </div>
-        </div>
+        </article>
 
         <!-- Product 2 -->
-        <div class="product-card p-8 relative reveal-right bg-white dark:bg-[#141c17]">
+        <article class="product-card p-8 relative reveal-right bg-white dark:bg-[#141c17]">
           <span class="counter text-kaitoke dark:text-moon-mist">02</span>
           <div class="relative z-10">
             <div class="flex items-center gap-3 mb-6">
@@ -240,7 +338,7 @@
               <span class="mono text-xs px-2 py-1 bg-moon-mist/40 dark:bg-moon-mist/10 text-kaitoke dark:text-moon-mist">TBD</span>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
@@ -286,6 +384,112 @@
     </div>
   </section>
 
+  <!-- Team -->
+  <section id="team" class="py-32 bg-[#f8f9f6] dark:bg-[#0a0f0d]">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="flex items-baseline gap-4 mb-20 reveal">
+        <span class="mono text-xs text-kaitoke/30 dark:text-moon-mist/20">03</span>
+        <h2 class="text-3xl md:text-4xl font-black text-kaitoke dark:text-moon-mist tracking-tight">Team</h2>
+        <div class="flex-1 rule"></div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 stagger-children">
+        <!-- Team Member 1 -->
+        <div class="text-center">
+          <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-moon-mist/50 dark:bg-moon-mist/10 flex items-center justify-center">
+            <span class="text-2xl font-bold text-kaitoke dark:text-moon-mist">?</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 dark:text-moon-mist mb-1">Founder Name</h3>
+          <span class="mono text-xs text-gray-400 dark:text-gray-500 block mb-3">founder</span>
+          <p class="text-sm text-gray-500 dark:text-gray-400 max-w-xs mx-auto">Placeholder bio. Replace with your info.</p>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="text-center">
+          <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-moon-mist/50 dark:bg-moon-mist/10 flex items-center justify-center">
+            <span class="text-2xl font-bold text-kaitoke dark:text-moon-mist">?</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 dark:text-moon-mist mb-1">Team Member</h3>
+          <span class="mono text-xs text-gray-400 dark:text-gray-500 block mb-3">role</span>
+          <p class="text-sm text-gray-500 dark:text-gray-400 max-w-xs mx-auto">Placeholder bio. Replace with your info.</p>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="text-center">
+          <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-moon-mist/50 dark:bg-moon-mist/10 flex items-center justify-center">
+            <span class="text-2xl font-bold text-kaitoke dark:text-moon-mist">?</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 dark:text-moon-mist mb-1">Team Member</h3>
+          <span class="mono text-xs text-gray-400 dark:text-gray-500 block mb-3">role</span>
+          <p class="text-sm text-gray-500 dark:text-gray-400 max-w-xs mx-auto">Placeholder bio. Replace with your info.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-32 bg-white dark:bg-[#141c17]">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="flex items-baseline gap-4 mb-20 reveal">
+        <span class="mono text-xs text-kaitoke/30 dark:text-moon-mist/20">04</span>
+        <h2 class="text-3xl md:text-4xl font-black text-kaitoke dark:text-moon-mist tracking-tight">FAQ</h2>
+        <div class="flex-1 rule"></div>
+      </div>
+
+      <div class="max-w-3xl space-y-6 stagger-children">
+        <details class="group border border-kaitoke/10 dark:border-moon-mist/10 p-6 open:pb-6" open>
+          <summary class="flex items-center justify-between cursor-pointer list-none">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-moon-mist">What is MelonPatch?</h3>
+            <span class="mono text-xs text-gray-400 group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+            MelonPatch is an indie software studio that builds AI-powered tools and experiences. Founded in 2026, the studio's philosophy is to ship small, iterate fast, and care deeply about the people who use their products. We focus on AI-powered tools, creative software, and indie games.
+          </p>
+        </details>
+
+        <details class="group border border-kaitoke/10 dark:border-moon-mist/10 p-6">
+          <summary class="flex items-center justify-between cursor-pointer list-none">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-moon-mist">What is the MelonPatch AI eBook Reader?</h3>
+            <span class="mono text-xs text-gray-400 group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+            The MelonPatch AI eBook Reader is an iOS app built for language learners. Users can upload ebooks (TXT or EPUB) in any language and read with AI-powered tap-to-translate, context-aware phrase detection, native pronunciation, and built-in spaced-repetition flashcard review. Words and phrases can be bookmarked to a word bank and reviewed with flashcard decks organized by language.
+          </p>
+        </details>
+
+        <details class="group border border-kaitoke/10 dark:border-moon-mist/10 p-6">
+          <summary class="flex items-center justify-between cursor-pointer list-none">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-moon-mist">What file formats does the eBook Reader support?</h3>
+            <span class="mono text-xs text-gray-400 group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+            The AI eBook Reader supports TXT and EPUB file formats. You can upload books in any language and set any target "native language" for translations.
+          </p>
+        </details>
+
+        <details class="group border border-kaitoke/10 dark:border-moon-mist/10 p-6">
+          <summary class="flex items-center justify-between cursor-pointer list-none">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-moon-mist">How does the flashcard review work?</h3>
+            <span class="mono text-xs text-gray-400 group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+            While reading, tap any word or phrase to translate it. Bookmark the translation and it gets added to your word bank. The app creates separate flashcard decks for each language you're learning. Review uses spaced repetition to help you retain vocabulary naturally over time.
+          </p>
+        </details>
+
+        <details class="group border border-kaitoke/10 dark:border-moon-mist/10 p-6">
+          <summary class="flex items-center justify-between cursor-pointer list-none">
+            <h3 class="text-lg font-bold text-gray-900 dark:text-moon-mist">When will the AI eBook Reader be available?</h3>
+            <span class="mono text-xs text-gray-400 group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-4 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+            The AI eBook Reader is coming soon to the iOS App Store. Follow us on Discord or reach out via email to stay updated on the launch.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact (Garden style: centered, rounded buttons) -->
   <section id="contact" class="py-24 bg-[#f8f9f6] dark:bg-[#0a0f0d]">
     <div class="max-w-2xl mx-auto px-6 text-center">
@@ -308,6 +512,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- Footer (Garden style: kaitoke background) -->
   <footer class="py-8 bg-kaitoke dark:bg-[#0a0f0d] text-white/60 dark:text-gray-500">

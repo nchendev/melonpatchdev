@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI eBook Reader — MelonPatch | iOS App for Language Learners</title>
+  <meta name="description" content="An AI-powered iOS ebook reader for language learners. Tap-to-translate, context-aware phrase detection, pronunciation guides, and spaced-repetition flashcard review. Supports TXT and EPUB.">
+  <meta name="author" content="MelonPatch">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://melonpatch.dev/products/ai-ebook-reader.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MelonPatch">
+  <meta property="og:title" content="AI eBook Reader — iOS App for Language Learners">
+  <meta property="og:description" content="Read ebooks in any language with AI-powered tap-to-translate, pronunciation, and smart flashcard review. Upload TXT or EPUB files.">
+  <meta property="og:url" content="https://melonpatch.dev/products/ai-ebook-reader.html">
+  <meta property="og:image" content="https://melonpatch.dev/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI eBook Reader — iOS App for Language Learners">
+  <meta name="twitter:description" content="Read ebooks in any language with AI-powered tap-to-translate, pronunciation, and smart flashcard review.">
+  <meta name="twitter:image" content="https://melonpatch.dev/assets/og-image.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MelonPatch AI eBook Reader",
+    "applicationCategory": "EducationApplication",
+    "operatingSystem": "iOS",
+    "description": "An AI-powered iOS ebook reader designed for language learners. Features tap-to-translate, context-aware phrase detection, pronunciation guides, and spaced-repetition flashcard review. Supports TXT and EPUB file formats.",
+    "featureList": [
+      "Tap-to-translate any word or phrase",
+      "Context-aware phrase detection",
+      "Native pronunciation guides",
+      "Spaced-repetition flashcard review",
+      "Word bank organized by language",
+      "TXT and EPUB file support",
+      "Upload books in any language"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/PreOrder"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "MelonPatch",
+      "url": "https://melonpatch.dev"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../css/tailwind.css">
+  <link rel="stylesheet" href="../css/shared.css">
+  <style>
+    .feature-card {
+      border: 1px solid rgba(1,68,33,0.1);
+      transition: all 0.3s ease;
+    }
+    .feature-card:hover {
+      border-color: #014421;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(1,68,33,0.08);
+    }
+    body.dark .feature-card {
+      border-color: rgba(208,216,195,0.1);
+    }
+    body.dark .feature-card:hover {
+      border-color: #D0D8C3;
+      box-shadow: 0 8px 24px rgba(208,216,195,0.05);
+    }
+    .mono { font-family: 'SF Mono', 'Fira Code', monospace; }
+    .rule {
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(1,68,33,0.2), transparent);
+    }
+    body.dark .rule {
+      background: linear-gradient(to right, transparent, rgba(208,216,195,0.1), transparent);
+    }
+  </style>
+</head>
+<body id="top" class="bg-white text-gray-900">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-[#0a0f0d]/80 backdrop-blur-md border-b border-moon-mist/30 dark:border-moon-mist/10">
+    <div class="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
+      <a href="../" class="logo-text text-xl tracking-tight">
+        <span>M</span><span class="text-gray-400 dark:text-gray-500">P</span>
+      </a>
+      <div class="hidden md:flex items-center gap-10 text-xs font-medium tracking-widest uppercase">
+        <a href="../#products" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">Products</a>
+        <a href="../#about" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">About</a>
+        <a href="../#team" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">Team</a>
+        <a href="../#faq" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">FAQ</a>
+        <a href="../#contact" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">Contact</a>
+      </div>
+      <button class="mobile-nav-toggle md:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+        <span class="w-6 h-0.5 bg-kaitoke dark:bg-moon-mist transition-all"></span>
+        <span class="w-6 h-0.5 bg-kaitoke dark:bg-moon-mist transition-all"></span>
+        <span class="w-4 h-0.5 bg-kaitoke dark:bg-moon-mist transition-all"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav fixed top-0 right-0 w-64 h-full z-40 bg-white dark:bg-[#141c17] shadow-2xl p-8 pt-20 md:hidden">
+    <div class="flex flex-col gap-6 text-sm font-medium tracking-widest uppercase">
+      <a href="../#products" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">Products</a>
+      <a href="../#about" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">About</a>
+      <a href="../#team" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">Team</a>
+      <a href="../#faq" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">FAQ</a>
+      <a href="../#contact" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">Contact</a>
+    </div>
+  </div>
+
+  <main>
+
+  <!-- Machine-readable description -->
+  <p class="sr-only">The MelonPatch AI eBook Reader is an iOS application for language learners. It supports TXT and EPUB file formats. Users can upload books in any language and use AI-powered tap-to-translate for context-aware translations, hear native pronunciation, and save words to a word bank. The app includes spaced-repetition flashcard review with separate decks per language.</p>
+
+  <!-- Hero -->
+  <section class="pt-32 pb-20 bg-[#f8f9f6] dark:bg-[#0a0f0d] relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-8 relative z-10">
+      <div class="max-w-3xl">
+        <div class="reveal mb-4">
+          <a href="../#products" class="mono text-xs text-kaitoke/40 dark:text-moon-mist/30 tracking-wider hover:text-kaitoke dark:hover:text-moon-mist transition-colors">&larr; back to products</a>
+        </div>
+        <div class="reveal flex items-center gap-3 mb-6" style="transition-delay: 0.1s;">
+          <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+          <span class="mono text-xs text-gray-400 dark:text-gray-500">coming_soon</span>
+        </div>
+        <h1 class="reveal text-5xl md:text-7xl font-black text-kaitoke dark:text-moon-mist tracking-tighter mb-6" style="transition-delay: 0.15s;">
+          AI eBook<br>Reader
+        </h1>
+        <div class="rule mb-6 reveal" style="transition-delay: 0.2s;"></div>
+        <p class="reveal text-xl text-gray-600 dark:text-gray-400 font-light max-w-xl mb-4" style="transition-delay: 0.25s;">
+          Read in any language. Learn as you go.
+        </p>
+        <p class="reveal text-sm text-gray-500 dark:text-gray-500 max-w-lg mb-10" style="transition-delay: 0.3s;">
+          A full-featured iOS ebook reader built for language learners. Upload any book, tap any word for context-aware translation, hear native pronunciation, and build vocabulary with smart flashcard review.
+        </p>
+        <div class="reveal flex flex-wrap gap-3 mb-10" style="transition-delay: 0.35s;">
+          <span class="mono text-xs px-3 py-1.5 bg-moon-mist/40 dark:bg-moon-mist/10 text-kaitoke dark:text-moon-mist">iOS</span>
+          <span class="mono text-xs px-3 py-1.5 bg-moon-mist/40 dark:bg-moon-mist/10 text-kaitoke dark:text-moon-mist">AI-Powered</span>
+          <span class="mono text-xs px-3 py-1.5 bg-moon-mist/40 dark:bg-moon-mist/10 text-kaitoke dark:text-moon-mist">Language Learning</span>
+          <span class="mono text-xs px-3 py-1.5 bg-moon-mist/40 dark:bg-moon-mist/10 text-kaitoke dark:text-moon-mist">TXT</span>
+          <span class="mono text-xs px-3 py-1.5 bg-moon-mist/40 dark:bg-moon-mist/10 text-kaitoke dark:text-moon-mist">EPUB</span>
+        </div>
+        <div class="reveal" style="transition-delay: 0.4s;">
+          <a href="mailto:hello@melonpatch.dev" class="inline-block px-8 py-3 bg-kaitoke text-white text-sm font-medium tracking-wide hover:bg-kaitoke-light transition-colors">
+            Get Notified at Launch
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-24 bg-white dark:bg-[#141c17]">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="flex items-baseline gap-4 mb-16 reveal">
+        <span class="mono text-xs text-kaitoke/30 dark:text-moon-mist/20">01</span>
+        <h2 class="text-3xl md:text-4xl font-black text-kaitoke dark:text-moon-mist tracking-tight">Features</h2>
+        <div class="flex-1 rule"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+        <div class="feature-card p-6 bg-[#f8f9f6] dark:bg-[#0a0f0d]">
+          <div class="w-10 h-10 rounded-lg bg-kaitoke/10 dark:bg-moon-mist/10 flex items-center justify-center mb-4">
+            <span class="text-kaitoke dark:text-moon-mist text-lg">T</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 dark:text-moon-mist mb-2">Tap-to-Translate</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Tap any word or phrase while reading for an instant, context-aware translation powered by AI.</p>
+        </div>
+
+        <div class="feature-card p-6 bg-[#f8f9f6] dark:bg-[#0a0f0d]">
+          <div class="w-10 h-10 rounded-lg bg-kaitoke/10 dark:bg-moon-mist/10 flex items-center justify-center mb-4">
+            <span class="text-kaitoke dark:text-moon-mist text-lg">C</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 dark:text-moon-mist mb-2">Context-Aware Phrases</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">AI detects multi-word phrases and idioms, providing translations that account for the surrounding context.</p>
+        </div>
+
+        <div class="feature-card p-6 bg-[#f8f9f6] dark:bg-[#0a0f0d]">
+          <div class="w-10 h-10 rounded-lg bg-kaitoke/10 dark:bg-moon-mist/10 flex items-center justify-center mb-4">
+            <span class="text-kaitoke dark:text-moon-mist text-lg">P</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 dark:text-moon-mist mb-2">Pronunciation Guides</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Hear native pronunciation for any word or phrase. Learn how it actually sounds, not just what it means.</p>
+        </div>
+
+        <div class="feature-card p-6 bg-[#f8f9f6] dark:bg-[#0a0f0d]">
+          <div class="w-10 h-10 rounded-lg bg-kaitoke/10 dark:bg-moon-mist/10 flex items-center justify-center mb-4">
+            <span class="text-kaitoke dark:text-moon-mist text-lg">W</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 dark:text-moon-mist mb-2">Word Bank</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Bookmark translations while reading. Words and phrases are saved to your personal word bank, organized by language.</p>
+        </div>
+
+        <div class="feature-card p-6 bg-[#f8f9f6] dark:bg-[#0a0f0d]">
+          <div class="w-10 h-10 rounded-lg bg-kaitoke/10 dark:bg-moon-mist/10 flex items-center justify-center mb-4">
+            <span class="text-kaitoke dark:text-moon-mist text-lg">F</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 dark:text-moon-mist mb-2">Flashcard Review</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Built-in spaced-repetition flashcards with separate decks per language. Retain vocabulary naturally over time.</p>
+        </div>
+
+        <div class="feature-card p-6 bg-[#f8f9f6] dark:bg-[#0a0f0d]">
+          <div class="w-10 h-10 rounded-lg bg-kaitoke/10 dark:bg-moon-mist/10 flex items-center justify-center mb-4">
+            <span class="text-kaitoke dark:text-moon-mist text-lg">B</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 dark:text-moon-mist mb-2">Any Book, Any Language</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Upload TXT or EPUB files in any language. Set your native language and start reading — no restrictions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-24 bg-[#f8f9f6] dark:bg-[#0a0f0d]">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="flex items-baseline gap-4 mb-16 reveal">
+        <span class="mono text-xs text-kaitoke/30 dark:text-moon-mist/20">02</span>
+        <h2 class="text-3xl md:text-4xl font-black text-kaitoke dark:text-moon-mist tracking-tight">How It Works</h2>
+        <div class="flex-1 rule"></div>
+      </div>
+
+      <div class="max-w-3xl space-y-12 stagger-children">
+        <div class="flex gap-6">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-kaitoke dark:bg-moon-mist/10 flex items-center justify-center">
+            <span class="text-white dark:text-moon-mist font-bold">1</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-moon-mist mb-2">Upload Your Book</h3>
+            <p class="text-gray-500 dark:text-gray-400 leading-relaxed">Import any TXT or EPUB file. Read books in Japanese, Spanish, French, Korean, Mandarin — any language you're learning.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-6">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-kaitoke dark:bg-moon-mist/10 flex items-center justify-center">
+            <span class="text-white dark:text-moon-mist font-bold">2</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-moon-mist mb-2">Read and Translate</h3>
+            <p class="text-gray-500 dark:text-gray-400 leading-relaxed">Tap any word or phrase for an instant, context-aware translation. The AI understands the surrounding text to give you accurate meanings.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-6">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-kaitoke dark:bg-moon-mist/10 flex items-center justify-center">
+            <span class="text-white dark:text-moon-mist font-bold">3</span>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-moon-mist mb-2">Save and Review</h3>
+            <p class="text-gray-500 dark:text-gray-400 leading-relaxed">Bookmark words to your word bank. Review them later with spaced-repetition flashcards that help you retain vocabulary over time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-white dark:bg-[#141c17]">
+    <div class="max-w-2xl mx-auto px-8 text-center">
+      <div class="reveal">
+        <span class="mono text-xs text-kaitoke/40 dark:text-moon-mist/30 tracking-wider">coming soon to ios</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-kaitoke dark:text-moon-mist mt-4 mb-4">Be the First to Know</h2>
+        <p class="text-gray-500 dark:text-gray-400 mb-10">
+          The AI eBook Reader is launching soon on the App Store. Drop us a line to get notified.
+        </p>
+        <a href="mailto:hello@melonpatch.dev" class="inline-flex items-center gap-3 px-8 py-4 bg-kaitoke text-white rounded-2xl font-medium hover:bg-kaitoke-light transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          Notify Me
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-kaitoke dark:bg-[#0a0f0d] text-white/60 dark:text-gray-500">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <a href="../" class="logo-text text-lg tracking-tight">
+        <span class="text-white dark:text-moon-mist">MELON</span><span class="text-moon-mist dark:text-gray-400">PATCH</span>
+      </a>
+      <p class="text-sm">&copy; 2026 MelonPatch. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="dark-toggle" aria-label="Toggle dark mode"></button>
+  <script src="../js/shared.js"></script>
+</body>
+</html>

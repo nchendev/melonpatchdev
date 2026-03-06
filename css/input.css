@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-kaitoke: #014421;
+  --color-kaitoke-light: #026b34;
+  --color-kaitoke-dark: #01331a;
+  --color-moon-mist: #D0D8C3;
+  --color-moon-mist-light: #e2e8d8;
+  --color-moon-mist-dark: #b8c2a8;
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+@source "../index.html";
+@source "../products/**/*.html";
+@source "../blog/**/*.html";
