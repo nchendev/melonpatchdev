@@ -34,7 +34,7 @@
 <body id="top" class="bg-white text-gray-900">
 
   <!-- Navigation -->
-  <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-[#0a0f0d]/80 backdrop-blur-md border-b border-moon-mist/30 dark:border-moon-mist/10">
+  <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-dark-bg/80 backdrop-blur-md border-b border-moon-mist/30 dark:border-moon-mist/10">
     <div class="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
       <a href="../" class="logo-text text-xl tracking-tight">
         <span>M</span><span class="text-gray-400 dark:text-gray-500">P</span>
@@ -57,7 +57,7 @@
   <div class="mobile-nav-backdrop fixed inset-0 z-40 bg-black/30 md:hidden"></div>
 
   <!-- Mobile Nav -->
-  <div class="mobile-nav fixed top-0 right-0 w-64 h-full z-50 bg-white dark:bg-[#141c17] shadow-2xl p-8 pt-20 md:hidden">
+  <div class="mobile-nav fixed top-0 right-0 w-64 h-full z-50 bg-white dark:bg-dark-surface shadow-2xl p-8 pt-20 md:hidden">
     <div class="flex flex-col gap-6 text-sm font-medium tracking-widest uppercase">
       <a href="../#products" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">Products</a>
       <a href="../#about" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">About</a>
@@ -69,7 +69,7 @@
   <main>
 
   <!-- Header -->
-  <section class="pt-32 pb-16 bg-[#f8f9f6] dark:bg-[#0a0f0d]">
+  <section class="pt-32 pb-16 bg-[#f8f9f6] dark:bg-dark-bg">
     <div class="max-w-7xl mx-auto px-8">
       <div class="max-w-3xl">
         <div class="reveal mb-4">
@@ -85,34 +85,23 @@
   </section>
 
   <!-- Blog Posts -->
-  <section class="py-16 bg-white dark:bg-[#141c17]">
+  <section class="py-16 bg-white dark:bg-dark-surface">
     <div class="max-w-3xl mx-auto px-8">
 
-      <!-- Empty state (remove when posts exist) -->
-      <div class="text-center py-20 reveal">
-        <span class="mono text-xs text-gray-400 dark:text-gray-500 block mb-4">no_posts_yet</span>
-        <h2 class="text-2xl font-bold text-gray-900 dark:text-moon-mist mb-3">Seeds are planted.</h2>
-        <p class="text-gray-500 dark:text-gray-400 text-sm max-w-md mx-auto">
-          Our first blog posts are growing. Check back soon for updates on our products, development insights, and more.
-        </p>
-      </div>
-
-      <!-- Blog post cards (uncomment and duplicate as needed)
       <div class="space-y-8 stagger-children">
-        <a href="posts/example-post.html" class="blog-card block p-8 bg-[#f8f9f6] dark:bg-[#0a0f0d]">
+        <a href="posts/hello-from-the-garden.html" class="blog-card block p-8 bg-[#f8f9f6] dark:bg-dark-bg">
           <div class="flex items-center gap-3 mb-4">
-            <span class="mono text-xs text-gray-400 dark:text-gray-500">2026-03-05</span>
+            <span class="mono text-xs text-gray-400 dark:text-gray-500">2026-03-09</span>
             <span class="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600"></span>
-            <span class="mono text-xs text-kaitoke/60 dark:text-moon-mist/40">product update</span>
+            <span class="mono text-xs text-kaitoke/60 dark:text-moon-mist/40">introduction</span>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-moon-mist mb-2">Example Blog Post Title</h3>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-moon-mist mb-2">Hello from the Garden</h3>
           <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
-            A brief description of the blog post goes here. Keep it concise and engaging to encourage readers to click through.
+            Introducing MelonPatch, an indie software studio building AI-powered tools we actually want to use. Our first product is an iOS ebook reader for language learners.
           </p>
           <span class="mono text-xs text-kaitoke dark:text-moon-mist">read more &rarr;</span>
         </a>
       </div>
-      -->
 
     </div>
   </section>
@@ -120,7 +109,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="py-8 bg-kaitoke dark:bg-[#0a0f0d] text-white/60 dark:text-gray-500">
+  <footer class="py-8 bg-kaitoke dark:bg-dark-bg text-white/60 dark:text-gray-500">
     <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-4">
       <a href="../" class="logo-text text-lg tracking-tight">
         <span class="text-white dark:text-moon-mist">MELON</span><span class="text-moon-mist dark:text-gray-400">PATCH</span>

@@ -7,6 +7,9 @@
   --color-moon-mist: #D0D8C3;
   --color-moon-mist-light: #e2e8d8;
   --color-moon-mist-dark: #b8c2a8;
+  --color-dark-bg: #0f1612;
+  --color-dark-surface: #1a241e;
+  --color-dark-elevated: #253029;
 }
 
 @variant dark (&:where(.dark, .dark *));

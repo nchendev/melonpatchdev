@@ -12,7 +12,8 @@
       "Bash(npm init -y)",
       "Bash(npm install -D tailwindcss @tailwindcss/cli)",
       "Bash(npx @tailwindcss/cli --help)",
-      "Bash(npx @tailwindcss/cli -i css/input.css -o css/tailwind.css --minify)"
+      "Bash(npx @tailwindcss/cli -i css/input.css -o css/tailwind.css --minify)",
+      "Bash(npm run build:css)"
     ]
   }
 }

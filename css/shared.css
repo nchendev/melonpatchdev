@@ -9,9 +9,9 @@
   --moon-mist-dark: #b8c2a8;
   --white: #ffffff;
   --off-white: #f8f9f6;
-  --dark-bg: #0a0f0d;
-  --dark-surface: #141c17;
-  --dark-surface-2: #1e2a23;
+  --dark-bg: var(--color-dark-bg);
+  --dark-surface: var(--color-dark-surface);
+  --dark-surface-2: var(--color-dark-elevated);
   --dark-text: #e8ece5;
   --dark-text-muted: #9aa896;
 }
