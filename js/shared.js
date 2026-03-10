@@ -2,6 +2,11 @@
 
 // Dark mode toggle (initial state is handled by inline script in <head>)
 function initDarkMode() {
+  // Sync dark class to body (inline <head> script only sets it on <html>)
+  if (document.documentElement.classList.contains('dark')) {
+    document.body.classList.add('dark');
+  }
+
   const toggle = document.querySelector('.dark-toggle');
   if (!toggle) return;
 
