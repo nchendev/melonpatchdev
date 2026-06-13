@@ -15,5 +15,6 @@
 @variant dark (&:where(.dark, .dark *));
 
 @source "../index.html";
+@source "../privacy.html";
 @source "../products/**/*.html";
 @source "../blog/**/*.html";
