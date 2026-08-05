@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TUG Co. - A Calm Puzzle Game | Melon Patch</title>
+  <meta name="description" content="TUG Co. is a free calm puzzle game for iOS and Android. Tug rows left and right to bring every keystone home. More than 80,000 puzzles, all openable by playing, three new Daily puzzles every day, no timers, no fail states, no account, and every puzzle mode plays fully offline.">
+  <meta name="author" content="Melon Patch">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://melonpatch.dev/tug/">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Melon Patch">
+  <meta property="og:title" content="TUG Co. - A Calm Puzzle Game">
+  <meta property="og:description" content="Tug rows, guide every keystone home, and descend through more than 80,000 free puzzles. No timers, no fail states, and every puzzle mode plays fully offline.">
+  <meta property="og:url" content="https://melonpatch.dev/tug/">
+  <meta property="og:image" content="https://melonpatch.dev/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TUG Co. - A Calm Puzzle Game">
+  <meta name="twitter:description" content="Tug rows, guide every keystone home, and descend through more than 80,000 free puzzles. No timers, no fail states, fully offline.">
+  <meta name="twitter:image" content="https://melonpatch.dev/assets/og-image.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["VideoGame", "MobileApplication"],
+    "name": "TUG Co.",
+    "alternateName": "TUG",
+    "genre": "Puzzle",
+    "applicationCategory": "GameApplication",
+    "operatingSystem": ["iOS", "ANDROID"],
+    "gamePlatform": ["iOS", "Android"],
+    "description": "TUG Co. is a calm puzzle game presented as your first day at an unusually cheerful company. Tug rows left and right to bring every keystone home. Some rows move together, others move against one another. More than 80,000 free puzzles across the Base campaign and the Heavy Gear pack, three new Daily puzzles every day, no timers, no fail states, no account required, and every puzzle mode plays fully offline. Every puzzle can be opened by playing; real money only ever buys Gold faster.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/PreOrder"
+    },
+    "accessibilityFeature": [
+      "displayTransformability",
+      "reducedMotion",
+      "highContrastDisplay"
+    ],
+    "accessibilityHazard": "none",
+    "author": {
+      "@type": "Organization",
+      "name": "Melon Patch LLC",
+      "url": "https://melonpatch.dev"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Melon Patch LLC",
+      "url": "https://melonpatch.dev"
+    }
+  }
+  </script>
+
+  <!-- Dark mode (before CSS to prevent FOUC) -->
+  <script>
+    (function(){var s=localStorage.getItem('melonpatch-dark');if(s==='true'||(!s&&matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}})();
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/tailwind.css">
+  <link rel="stylesheet" href="../css/shared.css">
+  <link rel="stylesheet" href="tug.css">
+</head>
+<body id="top" class="bg-white text-gray-900">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-dark-bg/80 backdrop-blur-md border-b border-moon-mist/30 dark:border-moon-mist/10">
+    <div class="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
+      <a href="../" class="logo-text text-xl tracking-tight">
+        <span>M</span><span class="text-gray-400 dark:text-gray-500">P</span>
+      </a>
+      <div class="flex items-center gap-4 md:gap-6">
+        <div class="hidden md:flex items-center gap-10 text-xs font-medium tracking-widest uppercase">
+          <a href="../#products" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">Products</a>
+          <a href="../#about" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">About</a>
+          <a href="../blog/" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">Blog</a>
+          <a href="../#contact" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">Contact</a>
+        </div>
+        <button class="mobile-nav-toggle md:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+          <span class="w-6 h-0.5 bg-kaitoke dark:bg-moon-mist transition-all"></span>
+          <span class="w-6 h-0.5 bg-kaitoke dark:bg-moon-mist transition-all"></span>
+          <span class="w-4 h-0.5 bg-kaitoke dark:bg-moon-mist transition-all"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav Backdrop -->
+  <div class="mobile-nav-backdrop fixed inset-0 z-40 bg-black/30 md:hidden"></div>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav fixed top-0 right-0 w-64 h-full z-50 bg-white dark:bg-dark-surface shadow-2xl p-8 pt-20 md:hidden">
+    <div class="flex flex-col gap-6 text-sm font-medium tracking-widest uppercase">
+      <a href="../#products" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">Products</a>
+      <a href="../#about" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">About</a>
+      <a href="../blog/" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">Blog</a>
+      <a href="../#contact" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">Contact</a>
+    </div>
+  </div>
+
+  <main class="tug-page">
+
+  <!-- Machine-readable description -->
+  <p class="sr-only">TUG Co. is a calm puzzle game for iOS and Android by Melon Patch LLC. You tug rows left and right to bring every keystone home. Some rows move together and others move against one another. The game holds more than 80,000 puzzles across the Base campaign and the Heavy Gear pack, and every one of them can be opened by playing; real money only ever buys Gold, the in-game currency, faster. Three new Daily puzzles arrive every day in Normal, Hard, and Hell difficulties. There are no timers and no fail states, and you can undo and restart freely. Every puzzle mode plays fully offline, including the campaign, Daily puzzles, Practice, and hints. No account is required. Progress is stored on your device. Accessibility features include text size up to 200 percent, UI scaling, reduced motion support, and visual cues that do not rely on color alone.</p>
+
+  <!-- Hero -->
+  <section class="pt-32 pb-16">
+    <div class="max-w-5xl mx-auto px-8">
+      <div class="reveal mb-4">
+        <a href="../#products" class="mono text-xs tug-dim tracking-wider hover:tug-ink transition-colors">&larr; back to Melon Patch</a>
+      </div>
+      <h1 class="reveal tug-display text-5xl md:text-7xl font-extrabold tug-ink tracking-tight mb-4" style="transition-delay: 0.1s;">
+        TUG Co.
+      </h1>
+      <p class="reveal text-xl md:text-2xl tug-ink font-light mb-3" style="transition-delay: 0.15s;">
+        A calm puzzle game.
+      </p>
+      <p class="reveal tug-dim max-w-xl mb-10" style="transition-delay: 0.2s;">
+        Tug rows left and right, learn how they pull on each other, and find the sequence that brings every keystone home.
+      </p>
+
+      <!-- Trailer + store badges. All hidden until a URL is set in STORE_URLS (script at page bottom).
+           The interactive tuggable-row demo is parked in _tuggable-row-snippet.txt for a later pass. -->
+      <div class="reveal flex flex-wrap items-center gap-4 mt-8" style="transition-delay: 0.25s;">
+        <a data-badge="trailer" hidden target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 tug-fact font-medium tug-ink hover:tug-dim transition-colors">&#9654;&#xFE0E; Watch the trailer</a>
+        <a data-badge="appstore" hidden target="_blank" rel="noopener"><img src="../assets/badges/app-store-badge.svg" alt="Download on the App Store" class="h-12 w-auto"></a>
+        <a data-badge="playstore" hidden target="_blank" rel="noopener"><img src="../assets/badges/google-play-badge.png" alt="Get it on Google Play" class="h-[68px] w-auto"></a>
+        <a href="https://discord.gg/EHhT3vz7gA" target="_blank" rel="noopener" class="text-sm tug-ink underline underline-offset-4 hover:tug-dim transition-colors">Join the Discord</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Honest facts, written as extractable answer blocks -->
+  <section class="py-20">
+    <div class="max-w-5xl mx-auto px-8">
+      <h2 class="reveal tug-display text-3xl font-bold tug-ink mb-10">A calm game, on purpose</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 stagger-children">
+        <div class="tug-fact">
+          <h3 class="font-bold tug-ink mb-2">No timers. No fail states.</h3>
+          <p class="tug-dim text-sm leading-relaxed">Nothing in TUG Co. rushes you. Experiment, undo, restart, and try another approach whenever you like.</p>
+        </div>
+        <div class="tug-fact">
+          <h3 class="font-bold tug-ink mb-2">Plays fully offline.</h3>
+          <p class="tug-dim text-sm leading-relaxed">Every puzzle mode works without a connection: the Base campaign, Daily puzzles, Practice, and hints.</p>
+        </div>
+        <div class="tug-fact">
+          <h3 class="font-bold tug-ink mb-2">No account required.</h3>
+          <p class="tug-dim text-sm leading-relaxed">There is no sign-in and no account. You open the game and play. Progress is stored on your device.</p>
+        </div>
+        <div class="tug-fact">
+          <h3 class="font-bold tug-ink mb-2">More than 80,000 puzzles.</h3>
+          <p class="tug-dim text-sm leading-relaxed">All of them free. The Base campaign is open from the start, and the Heavy Gear pack is earned by playing and opened with Gold you earn. Each puzzle sits a little deeper than the last.</p>
+        </div>
+        <div class="tug-fact">
+          <h3 class="font-bold tug-ink mb-2">Three Daily puzzles.</h3>
+          <p class="tug-dim text-sm leading-relaxed">Every day brings three new Daily puzzles in Normal, Hard, and Hell difficulties. Skipping a day costs nothing.</p>
+        </div>
+        <div class="tug-fact">
+          <h3 class="font-bold tug-ink mb-2">Readable by design.</h3>
+          <p class="tug-dim text-sm leading-relaxed">Text size up to 200%, UI scaling, reduced motion support, and cues that never rely on color alone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (visible Q&A in real query phrasing; answers pending owner review are marked) -->
+  <section class="py-20">
+    <div class="max-w-3xl mx-auto px-8">
+      <h2 class="reveal tug-display text-3xl font-bold tug-ink mb-8">Questions</h2>
+      <div class="tug-faq reveal">
+        <details>
+          <summary>Is TUG Co. free?</summary>
+          <p>Yes, the game and every puzzle in it. The Base campaign is open from the start, and the Heavy Gear pack is earned and opened with Gold you get from playing. Real money only buys Gold faster; no puzzle ever requires it.</p>
+        </details>
+        <details>
+          <summary>Does TUG Co. have ads?</summary>
+          <!-- Owner decision 2026-08-05: the "no ads" claim is categorical. If an ad faucet ever ships, every no-ads surface on this site must be rewritten FIRST. -->
+          <p>TUG Co. shows no ads. There are no banner ads, no video ads between puzzles, and no interruptions.</p>
+        </details>
+        <details>
+          <summary>Can you play TUG Co. without internet?</summary>
+          <p>Yes. Every puzzle mode plays fully offline: the Base campaign, the three Daily puzzles, Practice, and hints. Only purchasing needs a connection.</p>
+        </details>
+        <details>
+          <summary>Do I need an account?</summary>
+          <p>No. There is no account and no sign-in. Progress and Gold are stored on your device. They do not sync between devices, so keep a device backup if your progress matters to you.</p>
+        </details>
+        <details>
+          <summary>Is there a time limit on puzzles?</summary>
+          <p>No. There are no timers, no move limits that fail you, and no fail states of any kind. You can undo, restart, and think as long as you like.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community -->
+  <section class="py-20">
+    <div class="max-w-3xl mx-auto px-8 text-center">
+      <h2 class="reveal tug-display text-3xl font-bold tug-ink mb-4">Join the crew</h2>
+      <p class="reveal tug-dim max-w-lg mx-auto mb-8">
+        TUG Co. players hang out on the Melon Patch Discord. Compare solutions, report bugs, tell us what to build next, and hear news first.
+      </p>
+      <a href="https://discord.gg/EHhT3vz7gA" target="_blank" rel="noopener" class="reveal inline-flex items-center gap-3 px-8 py-4 bg-[#5865F2] text-white rounded-2xl font-medium hover:bg-[#4752c4] transition-colors">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+        Join the Melon Patch Discord
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer strip: the quiet disclosure + links -->
+  <section class="py-16">
+    <div class="max-w-3xl mx-auto px-8 text-center">
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-10">
+        <a data-badge="appstore" hidden target="_blank" rel="noopener"><img src="../assets/badges/app-store-badge.svg" alt="Download on the App Store" class="h-12 w-auto"></a>
+        <a data-badge="playstore" hidden target="_blank" rel="noopener"><img src="../assets/badges/google-play-badge.png" alt="Get it on Google Play" class="h-[68px] w-auto"></a>
+      </div>
+      <p class="tug-dim text-sm leading-relaxed mb-8">TUG Co. has no accounts or cloud saves. Progress lives on your device, so keep a device backup. The details are in Support.</p>
+      <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm">
+        <a href="support.html" class="tug-ink underline underline-offset-4 hover:tug-dim transition-colors">Support</a>
+        <a href="privacy.html" class="tug-ink underline underline-offset-4 hover:tug-dim transition-colors">Privacy</a>
+        <a href="for-parents.html" class="tug-ink underline underline-offset-4 hover:tug-dim transition-colors">For parents</a>
+        <a href="accessibility.html" class="tug-ink underline underline-offset-4 hover:tug-dim transition-colors">Accessibility</a>
+        <a href="press.html" class="tug-ink underline underline-offset-4 hover:tug-dim transition-colors">Press kit</a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-kaitoke dark:bg-dark-bg text-white/60 dark:text-gray-500">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <a href="../" class="logo-text text-lg tracking-tight">
+        <span class="text-white dark:text-moon-mist">MELON</span><span class="text-moon-mist dark:text-gray-400">PATCH</span>
+      </a>
+      <div class="flex items-center gap-6">
+        <a href="support.html" class="text-sm hover:text-white dark:hover:text-moon-mist transition-colors">Support</a>
+        <a href="privacy.html" class="text-sm hover:text-white dark:hover:text-moon-mist transition-colors">Privacy</a>
+        <p class="text-sm">&copy; 2026 Melon Patch LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="dark-toggle" aria-label="Toggle dark mode"></button>
+  <script src="../js/shared.js"></script>
+
+  <!-- Store links. Fill these in at launch; empty string keeps that badge hidden.
+       Both hero and bottom badge sets read from this one place. -->
+  <script>
+  (function () {
+    var STORE_URLS = {
+      appstore: "",   /* TODO(launch): https://apps.apple.com/app/idXXXXXXXXXX */
+      playstore: "",  /* TODO(launch): https://play.google.com/store/apps/details?id=com.melonpatch.tug */
+      trailer: ""     /* TODO(trailer): YouTube URL; empty keeps the button hidden */
+    };
+    document.querySelectorAll("[data-badge]").forEach(function (a) {
+      var url = STORE_URLS[a.getAttribute("data-badge")];
+      if (url) { a.href = url; a.removeAttribute("hidden"); }
+    });
+  })();
+  </script>
+
+</body>
+</html>

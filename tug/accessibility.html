@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibility in TUG Co. - Large Text, No Time Pressure | Melon Patch</title>
+  <meta name="description" content="How TUG Co. stays playable and comfortable: text size up to 200%, UI scaling, reduced motion support, color-independent visual cues, no timers, and no fail states. A calm puzzle game that does not rush anyone.">
+  <meta name="author" content="Melon Patch">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://melonpatch.dev/tug/accessibility.html">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Melon Patch">
+  <meta property="og:title" content="Accessibility in TUG Co.">
+  <meta property="og:description" content="Text size up to 200%, UI scaling, reduced motion, color-independent cues, no timers, no fail states.">
+  <meta property="og:url" content="https://melonpatch.dev/tug/accessibility.html">
+  <meta property="og:image" content="https://melonpatch.dev/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can text in TUG Co. be made bigger?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. TUG Co. has its own text size setting that goes up to 200 percent, and a separate UI scale setting from 90 to 150 percent that grows buttons and spacing. On first launch the game reads your device's text size preference as a starting point." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is TUG Co. playable with color blindness?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Nothing in TUG Co. relies on color alone. The two connection types are told apart by words, symbols, and screen position, with color as a redundant layer on top." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does anything in TUG Co. time out or fail?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. There are no timers, no move pressure, and no fail states. Puzzles wait as long as you need, and you can undo and restart freely." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does TUG Co. support reduced motion?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. A Reduce Motion setting cuts decorative animation while keeping the visual cues that carry meaning, so the game explains itself just as well with less movement." }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Dark mode (before CSS to prevent FOUC) -->
+  <script>
+    (function(){var s=localStorage.getItem('melonpatch-dark');if(s==='true'||(!s&&matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}})();
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/tailwind.css">
+  <link rel="stylesheet" href="../css/shared.css">
+  <link rel="stylesheet" href="tug.css">
+</head>
+<body id="top" class="bg-white text-gray-900">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-dark-bg/80 backdrop-blur-md border-b border-moon-mist/30 dark:border-moon-mist/10">
+    <div class="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
+      <a href="../" class="logo-text text-xl tracking-tight">
+        <span>M</span><span class="text-gray-400 dark:text-gray-500">P</span>
+      </a>
+      <div class="flex items-center gap-4 md:gap-6">
+        <div class="hidden md:flex items-center gap-10 text-xs font-medium tracking-widest uppercase">
+          <a href="../#products" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">Products</a>
+          <a href="../#about" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">About</a>
+          <a href="../blog/" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">Blog</a>
+          <a href="../#contact" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">Contact</a>
+        </div>
+        <button class="mobile-nav-toggle md:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+          <span class="w-6 h-0.5 bg-kaitoke dark:bg-moon-mist transition-all"></span>
+          <span class="w-6 h-0.5 bg-kaitoke dark:bg-moon-mist transition-all"></span>
+          <span class="w-4 h-0.5 bg-kaitoke dark:bg-moon-mist transition-all"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav Backdrop -->
+  <div class="mobile-nav-backdrop fixed inset-0 z-40 bg-black/30 md:hidden"></div>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav fixed top-0 right-0 w-64 h-full z-50 bg-white dark:bg-dark-surface shadow-2xl p-8 pt-20 md:hidden">
+    <div class="flex flex-col gap-6 text-sm font-medium tracking-widest uppercase">
+      <a href="../#products" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">Products</a>
+      <a href="../#about" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">About</a>
+      <a href="../blog/" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">Blog</a>
+      <a href="../#contact" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">Contact</a>
+    </div>
+  </div>
+
+  <main class="tug-page">
+
+  <!-- Header -->
+  <section class="pt-32 pb-10">
+    <div class="max-w-3xl mx-auto px-8">
+      <div class="reveal mb-4">
+        <a href="index.html" class="mono text-xs tug-dim tracking-wider hover:tug-ink transition-colors">&larr; back to TUG Co.</a>
+      </div>
+      <h1 class="reveal tug-display text-4xl md:text-5xl font-extrabold tug-ink tracking-tight mb-4" style="transition-delay: 0.1s;">Accessibility in TUG Co.</h1>
+      <p class="reveal tug-dim max-w-xl" style="transition-delay: 0.15s;">
+        A puzzle game should be hard because the puzzle is hard, not because the game is. These are the settings and choices that keep TUG Co. comfortable to play.
+      </p>
+      <div class="tug-rule reveal mt-8" style="transition-delay: 0.2s;"></div>
+    </div>
+  </section>
+
+  <!-- The features -->
+  <section class="py-12">
+    <div class="max-w-3xl mx-auto px-8 space-y-5 stagger-children">
+      <div class="tug-fact">
+        <h2 class="font-bold tug-ink mb-2">Text up to 200%</h2>
+        <p class="tug-dim text-sm leading-relaxed">TUG Co. has its own text size dial that goes up to 200 percent, separate from the puzzle board, so bigger text never squeezes the game. A second UI scale dial (90 to 150 percent) grows buttons and spacing as a whole. On first launch the game reads your device's text preference as its starting point.</p>
+        <!-- TODO(assets): screenshot of the settings screen at 200% text -->
+      </div>
+      <div class="tug-fact">
+        <h2 class="font-bold tug-ink mb-2">No time pressure, ever</h2>
+        <p class="tug-dim text-sm leading-relaxed">There are no timers, no countdowns during play, and no fail states. A puzzle waits as long as you need. Undo and Restart are always one tap away, and trying a move to see what happens is free: hold a row, watch what it does, and pull it back at no cost.</p>
+      </div>
+      <div class="tug-fact">
+        <h2 class="font-bold tug-ink mb-2">Never color alone</h2>
+        <p class="tug-dim text-sm leading-relaxed">The game's central idea is that rows move with or against each other, and that difference is always told at least three ways: in words ("moves with" / "moves against"), by symbol (= and &#x21c4;), and by position on screen. Color is a fourth, redundant layer. A player who cannot tell the two hues apart loses nothing.</p>
+      </div>
+      <div class="tug-fact">
+        <h2 class="font-bold tug-ink mb-2">Reduce Motion that keeps the meaning</h2>
+        <p class="tug-dim text-sm leading-relaxed">The Reduce Motion setting cuts decorative animation: celebrations calm down, ambient characters hold still, and transitions become instant. The cues that carry information stay, so the game explains itself just as well with less movement.</p>
+      </div>
+      <div class="tug-fact">
+        <h2 class="font-bold tug-ink mb-2">Readable by default</h2>
+        <p class="tug-dim text-sm leading-relaxed">A choice of four bundled typefaces, a designed dark mode (not an inverted one), and a warm, low-glare palette in both modes. Menus announce screen changes to screen readers and keep keyboard and controller focus where it belongs.</p>
+      </div>
+      <div class="tug-fact">
+        <h2 class="font-bold tug-ink mb-2">One-hand, one-finger play</h2>
+        <p class="tug-dim text-sm leading-relaxed">Everything in the game is done with simple taps and drags. No gesture needs two hands, precise timing, or speed. On desktop, the whole game also plays from the keyboard, and menus work with a controller.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12">
+    <div class="max-w-3xl mx-auto px-8">
+      <h2 class="reveal tug-display text-2xl font-bold tug-ink mb-6">Common questions</h2>
+      <div class="tug-faq reveal">
+        <details>
+          <summary>Is TUG Co. good for older players?</summary>
+          <p>We think so, and it is by design rather than accident: large adjustable text, big touch targets, no time pressure, no fail states, and puzzles that reward thinking over reflexes. Nothing in the game punishes playing slowly.</p>
+        </details>
+        <details>
+          <summary>Can I play with the sound off?</summary>
+          <p>Yes. Sound adds texture but carries no required information. Music, sound effects, and haptics each have their own toggle.</p>
+        </details>
+        <details>
+          <summary>Does the game work with a screen reader?</summary>
+          <p>Menus and screens announce themselves and manage focus properly. The puzzle board itself is visual, so full non-visual play is not currently supported. If that matters to you, tell us; it genuinely shapes what we build next.</p>
+        </details>
+        <details>
+          <summary>Is there anything flashing or strobing?</summary>
+          <p>No. The game has no flashing content, and its animations are soft, brief physical eases. With Reduce Motion on, most of them become instant state changes.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer strip -->
+  <section class="py-12">
+    <div class="max-w-3xl mx-auto px-8 text-center">
+      <div class="flex items-center justify-center gap-8 text-sm">
+        <a href="index.html" class="tug-ink underline underline-offset-4 hover:tug-dim transition-colors">About the game</a>
+        <a href="for-parents.html" class="tug-ink underline underline-offset-4 hover:tug-dim transition-colors">For parents</a>
+        <a href="support.html" class="tug-ink underline underline-offset-4 hover:tug-dim transition-colors">Support</a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-kaitoke dark:bg-dark-bg text-white/60 dark:text-gray-500">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <a href="../" class="logo-text text-lg tracking-tight">
+        <span class="text-white dark:text-moon-mist">MELON</span><span class="text-moon-mist dark:text-gray-400">PATCH</span>
+      </a>
+      <div class="flex items-center gap-6">
+        <a href="support.html" class="text-sm hover:text-white dark:hover:text-moon-mist transition-colors">Support</a>
+        <a href="privacy.html" class="text-sm hover:text-white dark:hover:text-moon-mist transition-colors">Privacy</a>
+        <p class="text-sm">&copy; 2026 Melon Patch LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="dark-toggle" aria-label="Toggle dark mode"></button>
+  <script src="../js/shared.js"></script>
+</body>
+</html>

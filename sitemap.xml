@@ -6,19 +6,34 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://melonpatch.dev/melonreader/</loc>
-    <lastmod>2026-06-13</lastmod>
+    <loc>https://melonpatch.dev/tug/</loc>
+    <lastmod>2026-08-05</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://melonpatch.dev/melonreader/support.html</loc>
-    <lastmod>2026-06-13</lastmod>
+    <loc>https://melonpatch.dev/tug/support.html</loc>
+    <lastmod>2026-08-05</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://melonpatch.dev/melonreader/privacy.html</loc>
-    <lastmod>2026-06-13</lastmod>
+    <loc>https://melonpatch.dev/tug/privacy.html</loc>
+    <lastmod>2026-08-05</lastmod>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://melonpatch.dev/tug/press.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://melonpatch.dev/tug/for-parents.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://melonpatch.dev/tug/accessibility.html</loc>
+    <lastmod>2026-08-05</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://melonpatch.dev/blog/</loc>

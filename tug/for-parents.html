@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TUG Co. for Parents - No Ads, No Chat, No Personal Data Collection | Melon Patch</title>
+  <meta name="description" content="What parents should know about TUG Co.: no ads, no chat or social features, no personal data collection, no timers or fail states, and full offline play. A straight answer on in-app purchases, too.">
+  <meta name="author" content="Melon Patch">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://melonpatch.dev/tug/for-parents.html">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Melon Patch">
+  <meta property="og:title" content="TUG Co. for Parents">
+  <meta property="og:description" content="No ads, no chat, no personal data collection, no timers. A straight answer on in-app purchases, too.">
+  <meta property="og:url" content="https://melonpatch.dev/tug/for-parents.html">
+  <meta property="og:image" content="https://melonpatch.dev/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does TUG Co. have ads?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. TUG Co. shows no ads. There are no banner ads, no video ads between puzzles, and no interruptions." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does TUG Co. have chat or social features?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. There is no chat, no friend list, no leaderboards, and no way to talk to strangers. TUG Co. is a single-player game." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does TUG Co. collect data about my child?",
+        "acceptedAnswer": { "@type": "Answer", "text": "TUG Co. collects no personal information from anyone. There are no accounts, no analytics, and no tracking. The only data that ever leaves the device is anonymous crash reports and, for purchases, the app store receipt." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does TUG Co. have in-app purchases?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, optional ones. TUG Co. sells packs of Gold, the in-game currency, which is also earned by playing. Every spend shows a confirmation, every puzzle can be opened without paying real money, and your device's parental purchase restrictions apply as normal." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can TUG Co. be played without internet?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every puzzle mode plays fully offline. A device with no connection, or in airplane mode, can play everything." }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Dark mode (before CSS to prevent FOUC) -->
+  <script>
+    (function(){var s=localStorage.getItem('melonpatch-dark');if(s==='true'||(!s&&matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}})();
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Baloo+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/tailwind.css">
+  <link rel="stylesheet" href="../css/shared.css">
+  <link rel="stylesheet" href="tug.css">
+</head>
+<body id="top" class="bg-white text-gray-900">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-dark-bg/80 backdrop-blur-md border-b border-moon-mist/30 dark:border-moon-mist/10">
+    <div class="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
+      <a href="../" class="logo-text text-xl tracking-tight">
+        <span>M</span><span class="text-gray-400 dark:text-gray-500">P</span>
+      </a>
+      <div class="flex items-center gap-4 md:gap-6">
+        <div class="hidden md:flex items-center gap-10 text-xs font-medium tracking-widest uppercase">
+          <a href="../#products" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">Products</a>
+          <a href="../#about" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">About</a>
+          <a href="../blog/" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">Blog</a>
+          <a href="../#contact" class="text-gray-400 dark:text-gray-500 hover:text-kaitoke dark:hover:text-moon-mist transition-colors">Contact</a>
+        </div>
+        <button class="mobile-nav-toggle md:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+          <span class="w-6 h-0.5 bg-kaitoke dark:bg-moon-mist transition-all"></span>
+          <span class="w-6 h-0.5 bg-kaitoke dark:bg-moon-mist transition-all"></span>
+          <span class="w-4 h-0.5 bg-kaitoke dark:bg-moon-mist transition-all"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav Backdrop -->
+  <div class="mobile-nav-backdrop fixed inset-0 z-40 bg-black/30 md:hidden"></div>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav fixed top-0 right-0 w-64 h-full z-50 bg-white dark:bg-dark-surface shadow-2xl p-8 pt-20 md:hidden">
+    <div class="flex flex-col gap-6 text-sm font-medium tracking-widest uppercase">
+      <a href="../#products" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">Products</a>
+      <a href="../#about" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">About</a>
+      <a href="../blog/" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">Blog</a>
+      <a href="../#contact" class="text-gray-500 dark:text-gray-400 hover:text-kaitoke dark:hover:text-moon-mist">Contact</a>
+    </div>
+  </div>
+
+  <main class="tug-page">
+
+  <!-- Header -->
+  <section class="pt-32 pb-10">
+    <div class="max-w-3xl mx-auto px-8">
+      <div class="reveal mb-4">
+        <a href="index.html" class="mono text-xs tug-dim tracking-wider hover:tug-ink transition-colors">&larr; back to TUG Co.</a>
+      </div>
+      <h1 class="reveal tug-display text-4xl md:text-5xl font-extrabold tug-ink tracking-tight mb-4" style="transition-delay: 0.1s;">TUG Co. for parents</h1>
+      <p class="reveal tug-dim max-w-xl" style="transition-delay: 0.15s;">
+        The facts a parent actually wants, stated plainly. TUG Co. is a calm, single-player puzzle game made for a general audience.
+      </p>
+      <div class="tug-rule reveal mt-8" style="transition-delay: 0.2s;"></div>
+    </div>
+  </section>
+
+  <!-- The facts -->
+  <section class="py-12">
+    <div class="max-w-3xl mx-auto px-8 space-y-5 stagger-children">
+      <div class="tug-fact">
+        <h2 class="font-bold tug-ink mb-2">No ads</h2>
+        <p class="tug-dim text-sm leading-relaxed">TUG Co. shows no ads. There are no banner ads, no video ads between puzzles, and nothing that interrupts play to sell something.</p>
+      </div>
+      <div class="tug-fact">
+        <h2 class="font-bold tug-ink mb-2">No chat, no strangers</h2>
+        <p class="tug-dim text-sm leading-relaxed">There is no chat, no friend list, no leaderboards, and no multiplayer. TUG Co. is a single-player game. Nobody can contact your child through it.</p>
+      </div>
+      <div class="tug-fact">
+        <h2 class="font-bold tug-ink mb-2">No personal data</h2>
+        <p class="tug-dim text-sm leading-relaxed">The game has no accounts, no analytics, and no tracking. It collects no personal information from anyone, adult or child. The only data that leaves the device is anonymous crash reports and, for purchases, the app store's receipt. The full detail is in the <a href="privacy.html" class="tug-ink underline underline-offset-4">privacy policy</a>, which is short enough to actually read.</p>
+      </div>
+      <div class="tug-fact">
+        <h2 class="font-bold tug-ink mb-2">Purchases, honestly</h2>
+        <p class="tug-dim text-sm leading-relaxed">TUG Co. is free, and every one of its puzzles can be opened without paying real money. It sells packs of Gold, an in-game currency that is also earned by playing. Gold buys optional things: hints, skipping a puzzle, extra puzzle packs, and cosmetic looks for the game's characters. Every spend shows a confirmation first, and the game never pressures a purchase. Your device's parental purchase restrictions (Screen Time on iOS, Family Link on Android) apply as normal.</p>
+        <!-- TODO(owner-review): if the Wardrobe draw ships at launch, add one sentence naming the cosmetic draw and its published odds. Launch guard currently gates it. -->
+      </div>
+      <div class="tug-fact">
+        <h2 class="font-bold tug-ink mb-2">Calm by design</h2>
+        <p class="tug-dim text-sm leading-relaxed">There are no timers, no lives, no fail states, and no daily-streak guilt. A missed day costs nothing. The game's world is a gentle, cartoon workplace with a small crew of helper critters. There is no violence and nothing scary.</p>
+      </div>
+      <div class="tug-fact">
+        <h2 class="font-bold tug-ink mb-2">Works offline</h2>
+        <p class="tug-dim text-sm leading-relaxed">Every puzzle mode plays fully offline. A device in airplane mode, or with no data plan, can play everything: the campaign, the Daily puzzles, Practice, and hints.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12">
+    <div class="max-w-3xl mx-auto px-8">
+      <h2 class="reveal tug-display text-2xl font-bold tug-ink mb-6">Questions parents ask</h2>
+      <div class="tug-faq reveal">
+        <details>
+          <summary>Is TUG Co. appropriate for kids?</summary>
+          <p>TUG Co. is a general-audience game, not a kids' app, but there is nothing in it a parent needs to worry about: no violence, no scary content, no chat, no ads, and no data collection. The puzzles reward patience and logical thinking.</p>
+        </details>
+        <details>
+          <summary>Can my kid spend money in it?</summary>
+          <p>Only through the app store's normal purchase flow, which your device's parental controls govern. Inside the game, every Gold spend shows a confirmation before it happens, and nothing required is behind a payment. If purchases are disabled on the device, nothing is lost: every puzzle still opens with Gold earned by playing.</p>
+        </details>
+        <details>
+          <summary>Does it need internet?</summary>
+          <p>No. Every puzzle mode plays fully offline. Only purchasing needs a connection.</p>
+        </details>
+        <details>
+          <summary>Is it a brain game?</summary>
+          <p>We make no brain-training claims. TUG Co. is a logic puzzle game: each puzzle asks you to read how rows are connected, plan a sequence, and carry it out. Whether that counts as exercise is between you and the puzzle.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer strip -->
+  <section class="py-12">
+    <div class="max-w-3xl mx-auto px-8 text-center">
+      <div class="flex items-center justify-center gap-8 text-sm">
+        <a href="index.html" class="tug-ink underline underline-offset-4 hover:tug-dim transition-colors">About the game</a>
+        <a href="accessibility.html" class="tug-ink underline underline-offset-4 hover:tug-dim transition-colors">Accessibility</a>
+        <a href="privacy.html" class="tug-ink underline underline-offset-4 hover:tug-dim transition-colors">Privacy</a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-kaitoke dark:bg-dark-bg text-white/60 dark:text-gray-500">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <a href="../" class="logo-text text-lg tracking-tight">
+        <span class="text-white dark:text-moon-mist">MELON</span><span class="text-moon-mist dark:text-gray-400">PATCH</span>
+      </a>
+      <div class="flex items-center gap-6">
+        <a href="support.html" class="text-sm hover:text-white dark:hover:text-moon-mist transition-colors">Support</a>
+        <a href="privacy.html" class="text-sm hover:text-white dark:hover:text-moon-mist transition-colors">Privacy</a>
+        <p class="text-sm">&copy; 2026 Melon Patch LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="dark-toggle" aria-label="Toggle dark mode"></button>
+  <script src="../js/shared.js"></script>
+</body>
+</html>

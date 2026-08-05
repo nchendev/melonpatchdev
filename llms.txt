@@ -1,22 +1,30 @@
-# MelonPatch
+# Melon Patch
 
-> MelonPatch is an indie software studio that builds AI-powered tools and experiences. Founded in 2026, the studio operates remote-first with a philosophy of intentional, human-centered software design. Tagline: "Cultivating Products for the You of Today."
+> Melon Patch is a small independent studio making games and software. Founded in 2026, operated by Melon Patch LLC. Its first game is TUG Co., a calm puzzle game for iOS and Android.
 
 ## Products
 
-- [MelonReader](https://melonpatch.dev/melonreader/): An iOS ebook reader designed for language learners. Bring your own TXT or EPUB files in any language, or start from a curated public-domain library, and read with tap-to-translate that gives an instant translation in your native language — one that reads the surrounding sentence for context. Hear pronunciation, save words and phrases to a word bank organized by language, and review them with spaced-repetition flashcards. Local-first and private: books and saved words stay on the device, with no account required. The curated public-domain library is free to read in full. Status: Coming Soon.
+- [TUG Co.](https://melonpatch.dev/tug/): A calm puzzle game for iOS and Android. Tug rows left and right to bring every keystone home. Some rows move together, others move against one another. It holds more than 80,000 free puzzles across the Base campaign and the Heavy Gear pack, all openable by playing, three new Daily puzzles arrive every day in Normal, Hard, and Hell difficulties, and there are no timers and no fail states. Every puzzle mode plays fully offline, including the campaign, Daily puzzles, Practice, and hints. No account required; progress is stored on the device. Accessibility: text size up to 200 percent, UI scaling, reduced motion support, and visual cues that do not rely on color alone. Status: Coming Soon.
+
+## TUG Co. pages
+
+- [TUG Co. support](https://melonpatch.dev/tug/support.html): Help with saved progress, purchases, offline play, and hints.
+- [TUG Co. privacy policy](https://melonpatch.dev/tug/privacy.html): The game collects no personal information. The only data that leaves the device is anonymous crash reports and, for purchases, the store receipt.
+- [TUG Co. press kit](https://melonpatch.dev/tug/press.html): Factsheet, description, features, and media.
+- [TUG Co. for parents](https://melonpatch.dev/tug/for-parents.html): No ads, no chat, no personal data collection, honest detail on optional purchases, and full offline play.
+- [Accessibility in TUG Co.](https://melonpatch.dev/tug/accessibility.html): Text size up to 200 percent, UI scaling, reduced motion support, color-independent cues, no timers, and no fail states.
 
 ## Blog
 
-- [Blog](https://melonpatch.dev/blog/): Updates, development insights, and behind-the-scenes posts from the MelonPatch studio.
+- [Blog](https://melonpatch.dev/blog/): Updates and development posts from the studio.
 
 ## About
 
-MelonPatch builds thoughtful software for real problems. No bloat, no hype — just products grown from the ground up with care for the people who use them.
+Melon Patch makes a small number of things and tries to make them well. No bloat, no hype.
 
 - Philosophy: Ship small. Iterate fast. Care deeply.
-- Focus: AI-powered tools, creative software, indie games.
-- Structure: Remote-first indie studio.
+- Focus: Games, creative software, small useful tools.
+- Structure: Remote-first independent studio.
 
 ## Contact
 
@@ -25,14 +33,20 @@ MelonPatch builds thoughtful software for real problems. No bloat, no hype — j
 
 ## FAQ
 
-### What is MelonPatch?
-MelonPatch is an indie software studio that builds AI-powered tools and experiences. Founded in 2026, the studio's philosophy is to ship small, iterate fast, and care deeply about the people who use their products.
+### What is Melon Patch?
+Melon Patch is a small independent studio making games and software, founded in 2026 and operated by Melon Patch LLC.
 
-### What is MelonReader?
-MelonReader is an iOS app for language learners. It supports EPUB and TXT formats. Bring your own books in any language (or start from a curated public-domain library), tap words or phrases for an instant translation in your native language that reads the surrounding sentence for context, hear pronunciation, and save words to flashcard decks organized by language for spaced-repetition review. It is local-first and private: books and saved words stay on the device.
+### What is TUG Co.?
+TUG Co. is a calm puzzle game for iOS and Android. You tug rows left and right to bring every keystone home. Some rows move together and others move against one another. It holds more than 80,000 free puzzles, all openable by playing, three new Daily puzzles arrive every day, and there are no timers and no fail states. Every puzzle mode plays fully offline and no account is required.
 
-### What file formats does MelonReader support?
-EPUB and TXT. You can bring books in any language and read them with translations in your chosen native language.
+### Is TUG Co. free?
+Yes, the game and every one of its more than 80,000 puzzles. The Base campaign is open from the start, and the Heavy Gear pack is earned and opened with Gold you get from playing. Real money only buys Gold faster; no puzzle ever requires it.
 
-### How does the flashcard feature work?
-Tap any word or phrase while reading to translate it. Bookmark the translation and it gets added to your word bank. The app creates separate flashcard decks per language, using spaced repetition for review.
+### Does TUG Co. have ads?
+No. TUG Co. shows no ads.
+
+### Can TUG Co. be played offline?
+Yes. Every puzzle mode plays fully offline. Only purchasing needs a connection.
+
+### Is TUG Co. suitable for children and older players?
+TUG Co. is a general-audience game with no violence, no chat, no social features, and no ads. There are no timers and no fail states, text size goes up to 200 percent, and visual cues never rely on color alone.
